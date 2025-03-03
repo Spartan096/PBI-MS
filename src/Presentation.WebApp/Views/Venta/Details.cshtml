@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Ventas > Detalle";
+}
+
+@model Domain.IM252Venta
+
+<dl>
+    <dt>Id de Venta</dt>
+    <dd>@Model.Id</dd>
+
+    <dt>Cliente</dt>
+    <dd>@Model.Cliente?.Nombre ?? "Cliente no disponible"</dd> <!-- Manejo de null para Cliente -->
+    
+    <dt>Cliente Id</dt>
+    <dd>@Model.ClienteId</dd>
+
+    <dt>Producto</dt>
+    <dd>@Model.Producto?.Descripcion ?? "Descripción no disponible"</dd> <!-- Manejo de null para Producto -->
+
+    <dt>Producto Id</dt>
+    <dd>@Model.ProductoId</dd>
+
+    <dt>Fecha de la Venta</dt>
+    <dd>@Model.Fecha.ToShortDateString()</dd>
+</dl>
+
+<a asp-action="Index" class="btn btn-danger mt-3">Regresar</a>

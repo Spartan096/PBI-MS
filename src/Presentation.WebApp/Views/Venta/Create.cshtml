@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Ventas > Crear";
+}
+
+@model Domain.IM252Venta
+
+<h1>
+    Insertar Venta:
+</h1>
+
+<form asp-action="Create">
+    Cliente: <select asp-for="ClienteId" asp-items="ViewBag.ClienteId"></select>
+    <br />
+    Producto: <select asp-for="ProductoId" asp-items="ViewBag.ProductoId"></select>
+    <br />
+    Fecha: <input asp-for="Fecha" type="date" required />
+    <br />
+    <button>Insertar</button>
+</form>
+
+<a asp-action="Index">Cancelar</a>

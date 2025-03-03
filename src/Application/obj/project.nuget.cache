@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Cg0INp5LLqg=",
+  "success": true,
+  "projectFilePath": "E:\\IMPyMANTSis\\Proy01v1\\src\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carma\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.2\\microsoft.win32.systemevents.9.0.2.nupkg.sha512",
+    "C:\\Users\\carma\\.nuget\\packages\\system.drawing.common\\9.0.2\\system.drawing.common.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

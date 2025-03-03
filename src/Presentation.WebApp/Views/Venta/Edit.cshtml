@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Ventas > Editar";
+}
+
+@model Domain.IM252Venta
+
+<h1>
+    Actualizar Venta:
+</h1>
+
+<form asp-action="Edit">
+    <input asp-for="Id" type="hidden" required />
+
+    Cliente: <select asp-for="ClienteId" asp-items="ViewBag.ClienteId"></select>
+    <br />
+    Producto: <select asp-for="ProductoId" asp-items="ViewBag.ProductoId"></select>
+    <br />
+    Fecha: <input asp-for="Fecha" type="date" required />
+    <br />
+    <button>Actualizar</button>
+</form>
+
+<a asp-action="Index">Cancelar</a>

@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Ventas";
+}
+
+@model List<Domain.IM252Venta>
+
+<!-- Enlace para crear una nueva venta -->
+<a asp-action="Create">Crear Nueva Venta</a>
+
+<h1>Mostrar Ventas</h1>
+
+<table>
+    <tr>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <!-- Mostrar el nombre del cliente asociado a la venta, con comprobación en caso de que Cliente sea nulo -->
+            <td>@v.Cliente?.Nombre ?? "Cliente no disponible"</td>  <!-- Si Cliente es null, mostrar "Cliente no disponible" -->
+
+            <!-- Mostrar la descripción del producto asociado a la venta, con comprobación en caso de que Producto sea nulo -->
+            <td>@v.Producto?.Descripcion ?? "Descripción no disponible"</td> <!-- Si Producto es null, mostrar "Descripción no disponible" -->
+
+            <!-- Mostrar la fecha de la venta -->
+            <td>@v.Fecha.ToShortDateString()</td>
+
+            <!-- Enlaces para acciones -->
+            <td>
+                <a asp-action="Details" asp-route-id="@v.Id">Detalles</a> |
+                <a asp-action="Edit" asp-route-id="@v.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@v.Id">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>

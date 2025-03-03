@@ -1,0 +1,15 @@
+@using Domain
+
+@model IM252Cliente
+<h2>Agregar Cliente</h2>
+<form method="post">
+    <label>Nombre:</label>
+    <input type="text" asp-for="Nombre" required /><br/>
+    <label>Dirección:</label>
+    <input type="text" asp-for="Direccion" required /><br/>
+    <label>Teléfono:</label>
+    <input type="text" asp-for="Telefono" required /><br/>
+    <label>Correo:</label>
+    <input type="email" asp-for="Correo" required /><br/>
+    <button type="submit">Guardar</button>
+</form>
